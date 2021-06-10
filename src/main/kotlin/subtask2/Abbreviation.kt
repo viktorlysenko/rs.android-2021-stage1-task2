@@ -7,12 +7,17 @@ class Abbreviation {
         //throw NotImplementedError("Not implemented")
 
         var aUpperCase = a.toUpperCase()
-        var index = 0
-        while(index <= aUpperCase.length - 1) {
-            
-            index++
+        var indexA = 0
+        var indexB = 0
+        while(indexA <= aUpperCase.length - 1 && indexB <= b.length-1) {
+            if(aUpperCase[indexA] == b[indexB]) {
+               // print(b[indexB])
+               // println(indexB)
+                indexB++
+            }
+            indexA++
         }
-
-        return "YES"
+        println(indexB)
+        return if (b.length == indexB) "YES" else "NO"
     }
 }
