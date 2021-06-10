@@ -1,7 +1,9 @@
 package subtask1
 
+
 import java.text.ParseException
 import java.text.SimpleDateFormat
+
 import java.util.*
 
 class DateFormatter {
@@ -13,7 +15,7 @@ class DateFormatter {
             val taskDate: Date = inputFormat.parse("$day.$month.$year")
 
             val newFormat: SimpleDateFormat = SimpleDateFormat(OUTPUT_DATE_FORMAT,Locale("RU"))
-
+           // println("${newFormat.format(taskDate)}")
             newFormat.format(taskDate)
         }catch (e: ParseException){
             ERROR_DATE
